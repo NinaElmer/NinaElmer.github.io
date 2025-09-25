@@ -1,0 +1,5 @@
+url: "http://ninaelmer.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+title: "Nina Elmer" # the name of your site, e.g. ACME Corp.
+description: "PostDoc in Physics"
+organization: "ITP, Heidelberg University"

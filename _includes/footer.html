@@ -1,0 +1,21 @@
+<footer class="pt-5 my-5 text-muted border-top">
+  <div class="row">
+    <div class="col-md-6 text-end social-media-icons">
+      {% for item in site.data.settings.social %}
+        {% if item.icon_html %}
+          <!-- Custom icon (e.g., @ for email) -->
+          <a href="{{ item.link }}" class="ms-3 fs-5" title="{{ item.title }}"
+             style="color:#0d47a1; font-weight:bold; text-decoration:none;">
+            {{ item.icon_html | raw }}
+          </a>
+        {% elsif item.icon %}
+          <!-- Standard font-awesome icon -->
+          <a href="{{ item.link }}" class="ms-3 fs-5" title="{{ item.title }}"
+             style="color:#0d47a1; text-decoration:none;">
+            <i class="fab fa-{{ item.icon }}"></i>
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</footer>

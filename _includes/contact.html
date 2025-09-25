@@ -1,0 +1,34 @@
+<div class="row g-5 mb-5">
+  <div>
+    <h3 class="fw-bold border-bottom pb-3 mb-5">Contact</h3>
+    {% for contact in site.data.settings.contacts %}
+      <div class="row g-5 mb-5 align-items-center">
+        <div class="col-md-6">
+          <h4>{{ contact.name }}</h4>
+          <p>{{ contact.department }}</p>
+          <p>{{ contact.institution }}<br>{{ contact.institution_address }}</p>
+
+          {% if contact.email %}
+            <p>
+              Email: 
+              <a href="mailto:{{ contact.email }}" style="text-decoration:none;">
+                @ {{ contact.email }}
+              </a>
+            </p>
+          {% endif %}
+
+          <!-- Optional fields:
+          {% if contact.phone %}<p>Phone: {{ contact.phone }}</p>{% endif %}
+          {% if contact.office %}<p>Office: {{ contact.office }}</p>{% endif %}
+          -->
+        </div>
+        <div class="col-md-6">
+          {% if contact.image %}
+            <img src="{{ site.github.url }}/{{ contact.image }}" alt="Contact" width="100%">
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+

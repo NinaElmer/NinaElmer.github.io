@@ -1,0 +1,26 @@
+<header class="d-flex flex-column pb-3 mb-5 border-bottom header-tall position-relative">
+  <!-- Top stack: title + description -->
+  <div class="header-top mb-2">
+    <a href="{{ site.github.url }}/" class="text-decoration-none header-title">
+      <span class="fs-4 fw-bold">{{ site.title }}</span>
+    </a>
+    <a href="{{ site.github.url }}/" class="text-decoration-none header-description">
+      <span>{{ site.description }}</span>
+    </a>
+  </div>
+
+  <!-- Bottom row: organization + nav links -->
+  <div class="d-flex justify-content-between align-items-center">
+    <div class="organization">{{ site.organization }}</div>
+    <nav class="d-flex nav-links">
+      {% for item in site.data.settings.menu %}
+        <a class="me-3 text-decoration-none" href="{{ site.github.url }}{{ item.url }}">{{ item.name }}</a>
+      {% endfor %}
+    </nav>
+  </div>
+
+  <!-- Profile picture floating top-right -->
+  <img src="{{ site.github.url }}/assets/img/home.jpg" 
+       alt="Profile" 
+       class="profile-top-left">
+</header>

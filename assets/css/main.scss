@@ -1,0 +1,44 @@
+---
+---
+
+header.site-header {
+  color: #0a1f44;            // text color, optional
+}
+
+.profile-top-left {
+  width: 100px;             // adjust size as needed
+  height: 100px;
+  border-radius: 50%;       // circular
+  object-fit: cover;
+  position: absolute;       // fixed relative to page or parent
+  top: 0px;                // distance from top
+  left: -120px;              // distance from right
+  border: 2px solid #333;   // optional border
+  z-index: 10;              // stay above other content
+}
+.header-tall {
+  min-height: 100px;          // roughly match profile picture
+  color: #0a1f44;             // dark blue
+}
+
+.header-title,
+.header-description,
+.organization,
+.nav-links a {
+  color: #0a1f44 !important;  // enforce dark blue
+}
+
+.header-top {
+  display: flex;
+  flex-direction: column;
+}
+
+.organization {
+  font-size: 0.9rem;
+}
+
+.nav-links a {
+  font-size: 0.9rem;
+}
+
+
