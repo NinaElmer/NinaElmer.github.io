@@ -1,36 +1,29 @@
+{% if page.title == "Home" %}
+  {% assign publications = site.data.publications.featured %}
+{% else %}
+  {% assign publications = site.data.publications.index %}
+{% endif %}
+
+
 <div class="row g-4 mb-5">
   <div>
     <h3 class="fw-bold border-bottom pb-3 mb-4">Publications</h3>
 
-    {% if page.title == "Home" %}
-      {% assign publications = site.data.publications.featured %}
-    {% else %}
-      {% assign publications = site.data.publications.index %}
-    {% endif %}
-
     {% for pub in publications %}
       {% assign clean_title = pub.name | replace: '{', '' | replace: '}', '' %}
-
-      <p class="mb-2" style="line-height:1.4; color:black;">
+      <p class="mb-2" style="line-height:1.4;">
         {{ clean_title }}
-
         {% assign links = "" %}
-
         {% if pub.pdf %}
-          {% assign links = links | append: '<a href="' | append: pub.pdf | append: '" target="_blank" style="font-weight:bold; color:#0d47a1;">PDF</a>' %}
+          {% assign links = links | append: '<a href="' | append: pub.pdf | append: '" target="_blank" style="color:#0d47a1; font-weight:bold;">PDF</a>' %}
         {% endif %}
-
         {% if pub.cite %}
-          {% assign links = links | append: ' | <a href="' | append: pub.cite | append: '" download style="font-weight:bold; color:#0d47a1;">Cite</a>' %}
+          {% assign links = links | append: ' | <a href="' | append: pub.cite | append: '" target="_blank" style="color:#0d47a1; font-weight:bold;">Cite</a>' %}
         {% endif %}
-
         {% if pub.arxiv %}
-          {% assign links = links | append: ' | <a href="' | append: pub.arxiv | append: '" target="_blank" style="font-weight:bold; color:#0d47a1;">arXiv</a>' %}
+          {% assign links = links | append: ' | <a href="' | append: pub.arxiv | append: '" target="_blank" style="color:#0d47a1; font-weight:bold;">arXiv</a>' %}
         {% endif %}
-
-        {% if links != "" %}
-          &mdash; {{ links | raw }}
-        {% endif %}
+        {% if links != "" %} &mdash; {{ links | raw }}{% endif %}
       </p>
     {% endfor %}
   </div>

@@ -1,0 +1,47 @@
+---
+index:
+- &1
+  name: Bahl, Henning and Diefenbacher, Sascha and Elmer, Nina and Plehn, Tilman and
+    Spinner, Jonas (2025). {Forecasting Generative Amplification}.
+  pdf: https://arxiv.org/pdf/2509.08048.pdf
+  arxiv: https://arxiv.org/abs/2509.08048
+  cite: ''
+  year: 2025
+- &2
+  name: Bahl, Henning and Elmer, Nina and Plehn, Tilman and Winterhalder, Ramon (2025).
+    {Amplitude Uncertainties Everywhere All at Once}.
+  pdf: https://arxiv.org/pdf/2509.00155.pdf
+  arxiv: https://arxiv.org/abs/2509.00155
+  cite: ''
+  year: 2025
+- &3
+  name: Bahl, Henning and Elmer, Nina and Favaro, Luigi and Hau{\ss}mann, Manuel and
+    Plehn, Tilman and Winterhalder, Ramon (2024). {Accurate Surrogate Amplitudes with
+    Calibrated Uncertainties}.
+  pdf: https://arxiv.org/pdf/2412.12069.pdf
+  arxiv: https://arxiv.org/abs/2412.12069
+  cite: ''
+  year: 2024
+- name: Degenkolb, Skyler and Elmer, Nina and Modak, Tanmoy and M{\"u}hlleitner, Margarete
+    and Plehn, Tilman (2024). {A Global View of the EDM Landscape}.
+  pdf: https://arxiv.org/pdf/2403.02052.pdf
+  arxiv: https://arxiv.org/abs/2403.02052
+  cite: ''
+  year: 2024
+- name: Elmer, Nina and Madigan, Maeve and Plehn, Tilman and Schmal, Nikita (2023).
+    {Staying on Top of SMEFT-Likelihood Analyses}.
+  pdf: https://arxiv.org/pdf/2312.12502.pdf
+  arxiv: https://arxiv.org/abs/2312.12502
+  cite: https://doi.org/10.21468/SciPostPhys.18.3.108
+  year: 2023
+- name: Brivio, Ilaria and Bruggisser, Sebastian and Elmer, Nina and Geoffray, Emma
+    and Luchmann, Michel and Plehn, Tilman (2022). {To profile or to marginalize -
+    A SMEFT case study}.
+  pdf: https://arxiv.org/pdf/2208.08454.pdf
+  arxiv: https://arxiv.org/abs/2208.08454
+  cite: https://doi.org/10.21468/SciPostPhys.16.1.035
+  year: 2022
+featured:
+- *1
+- *2
+- *3
