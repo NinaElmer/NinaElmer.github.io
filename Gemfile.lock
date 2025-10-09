@@ -170,6 +170,7 @@ PLATFORMS
 DEPENDENCIES
   academic-jekyll-theme!
   bibtex-ruby
+  jekyll (~> 4.2)
 
 BUNDLED WITH
    2.7.2
