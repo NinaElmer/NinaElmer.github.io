@@ -1,0 +1,67 @@
+- year: 2025
+  talks:
+    - name: "Learning Reliable Uncertainties"
+      link: "/talks/ACAT25.pdf"
+      conference: "ACAT 2025 conference — Hamburg, Germany"
+    - name: "Accuracy and uncertainty control for ML-Amplitudes"
+      link: "/talks/KISS25.pdf"
+      conference: "KISS BMBF Annual meeting — Munich, Germany"
+      info: "Invited talk"
+    - name: "Learned Uncertainties for LHC-Networks"
+      link: "/talks/MG_meeting25.pdf"
+      conference: "MadGraph5_aMC@NLO meeting - CERN, Switzerland"
+    - name: "Using amplitudes for accuracy and uncertainty estimation in ML"
+      link: "/talks/COMETA25.pdf"
+      conference: "COMETA Working Group Meeting - Online"
+      info: "Invited talk"
+
+- year: 2024
+  talks:
+    - name: "Accuracy and Uncertainties for ML-Amplitudes"
+      link: "/talks/Nikhef_seminar.pdf"
+      conference: "Nikhef Theory Seminar — Amsterdam, Netherlands"
+      info: "Invited Seminar"
+    - name: "The good, the bad, and the Bayesian"
+      link: "/talks/ML4Jets24.pdf"
+      conference: "ML4Jets Conference — Paris, France"
+    - name: "Uncertainty-aware machine learning for the LHC"
+      conference: "PHYSTAT - Statistics meet AI — London, UK"
+      info: "Poster"
+    - name: "The Impact of Theory Uncertainties in Global EDM Analyses"
+      link: "/talks/Frascati24.pdf"
+      conference: "IRN Terascale Meeting — Frascati, Italy"
+    - name: "A Global EDM Analysis with Theory Uncertainties"
+      link: "/talks/EDM_workshop.pdf"
+      conference: "EDM Workshop — Trento, Italy"
+      info: "Invited Talk"
+    - name: "A global interpretation of EDMs"
+      link: "/talks/EDM_CRC.pdf"
+      conference: "Annual Meeting of the CRC TRR 257 — Karlsruhe, Germany"
+      info: "Invited Talk"
+
+- year: 2023
+  talks:
+    - name: "Global analysis: The true constraining power of different EDM measurements"
+      link: "/talks/Marseille23.pdf"
+      conference: "IRN Terascale Meeting — Marseille, France"
+    - name: "From Higgs to Top - A global SMEFT analysis"
+      link: "/talks/Pheno23.pdf"
+      conference: "Pheno Conference — Pittsburgh, USA"
+    - name: "From Higgs to Top - A global SMEFT analysis"
+      link: "/talks/BNL23.pdf"
+      conference: "BNL Lunch Seminar — Brookhaven, USA"
+      info: "Invited Seminar"
+    - name: "Profiling and Marginalization in a global SMEFT analysis"
+      link: "/talks/ALPS23.pdf"
+      conference: "ALPS Conference — Obergurgl, Austria"
+
+- year: 2022
+  talks:
+    - name: "To Profile or to Marginalize: A SMEFT case study"
+      link: "/talks/Higgs22.pdf"
+      conference: "Higgs Conference — Pisa, Italy"
+    - name: "To Profile or to Marginalize: A SMEFT case study"
+      link: "/talks/DESYTH22.pdf"
+      conference: "DESY Theory Workshop — Hamburg, Germany"
+
+

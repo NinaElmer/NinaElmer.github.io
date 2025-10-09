@@ -3,6 +3,7 @@ menu:
 - {name: 'publications', url: '/publications'}
 # - {name: 'courses', url: '/courses'}
 - {name: 'cv', url: '/cv'}
+- {name: 'talks', url: '/talks'}
 - {name: 'contact', url: '/contact'}
 
 people:
@@ -18,9 +19,9 @@ courses:
 social:
 - {icon: 'github', link: 'https://github.com/NinaElmer'}
 - {icon: 'linkedin', link: 'https://www.linkedin.com/in/nina-elmer-07a22919a/'}
-- {icon_html: '@', link: 'mailto:elmer@thphys.uni-heidelberg.de'}
+- {icon_html: '@', link: 'mailto:nme24@cam.ac.uk'}
 - {icon: 'orcid', link: 'https://orcid.org/0000-0001-9579-6010'}
 - {icon: 'google', link: 'https://scholar.google.com/citations?user=7FplwPcAAAAJ&hl=de'}
 
 contacts:
-- {name: 'Dr. Nina Elmer', department: 'Institute for Theoretical Physics', institution: 'Heidelberg University', institution_address: 'Philosophenweg 16, 69120 Heidelberg', email: 'elmer@thphys.uni-heidelberg.de', image: 'assets/img/contact.jpg'}
+- {name: 'Dr. Nina Elmer', department: 'Center for AI research, DAMTP', institution: 'University of Cambridge', institution_address: 'Wilberforce Road, Cambridge, CB3 0WA', email: 'nme24@cam.ac.uk', image: 'assets/img/contact.jpeg'}

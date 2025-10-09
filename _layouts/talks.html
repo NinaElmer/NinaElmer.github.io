@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+{{ content }}
+<div class="row g-5 mb-5">
+  <div>
+    <!-- Main heading -->
+    <h2 class="fw-bold mb-4">Talks</h2>
+
+    {% for year_group in site.data.talks %}
+      <!-- Year as subheading -->
+      <h3 class="fw-bold mt-4 mb-3">{{ year_group.year }}</h3>
+      <ul class="list-unstyled mb-3">
+        {% for talk in year_group.talks %}
+          <li class="mb-3">
+            <!-- Talk name with optional link -->
+            <strong>
+              {% if talk.link %}
+                <a href="{{ talk.link }}" target="_blank">{{ talk.name }}</a>
+              {% else %}
+                {{ talk.name }}
+              {% endif %}
+            </strong><br>
+
+            <!-- Conference and info with same style -->
+            {% if talk.conference %}
+              <span class="text-muted">{{ talk.conference }}</span><br>
+            {% endif %}
+            {% if talk.info %}
+              <span class="text-muted">{{ talk.info }}</span>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
+  </div>
+</div>

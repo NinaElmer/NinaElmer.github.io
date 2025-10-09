@@ -6,18 +6,10 @@ layout: default
 
 <div class="row g-5 mb-5">
   <div>
-    <h3 class="fw-bold border-bottom pb-3 mb-5">CV</h3>
-    <div class="row g-5 mb-5">
-      <div class="col-md-2">
-        <h4>Education</h4>
-      </div>
-      <div class="col-md-10">
-        {% for section in site.data.cv.education %}
-          <p class="fw-bold">{{ section.title }}</p>
-          <p>{{ section.description }}</p>
-        {% endfor %}
-      </div>
-    </div>
+    <!-- Page Title -->
+    <h3 class="fw-bold pb-3 mb-5">Experience</h3>
+
+    <!-- Academic Experience -->
     <div class="row g-5 mb-5">
       <div class="col-md-2">
         <h4>Academic Experience</h4>
@@ -26,8 +18,37 @@ layout: default
         {% for section in site.data.cv.academic-experience %}
           <p class="fw-bold">{{ section.title }}</p>
           <p>{{ section.description }}</p>
+          {% if section.notes %}
+            <ul>
+              {% for note in section.notes %}
+                <li>{{ note }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
         {% endfor %}
       </div>
     </div>
+
+    <!-- Education -->
+    <div class="row g-5 mb-5">
+      <div class="col-md-2">
+        <h4>Education</h4>
+      </div>
+      <div class="col-md-10">
+        {% for section in site.data.cv.education %}
+          <p class="fw-bold">{{ section.title }}</p>
+          <p>{{ section.description }}</p>
+          {% if section.notes %}
+            <ul>
+              {% for note in section.notes %}
+                <li>{{ note }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- Additional sections can follow the same pattern -->
   </div>
 </div>

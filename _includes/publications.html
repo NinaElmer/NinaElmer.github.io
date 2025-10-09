@@ -5,9 +5,9 @@
 {% endif %}
 
 
-<div class="row g-4 mb-5">
+<div class="row g-2 mb-3">
   <div>
-    <h3 class="fw-bold border-bottom pb-3 mb-4">Publications</h3>
+    <h3 class="fw-bold mb-3">Publications</h3>
 
     {% for pub in publications %}
       {% assign clean_title = pub.name | replace: '{', '' | replace: '}', '' %}
@@ -28,3 +28,4 @@
     {% endfor %}
   </div>
 </div>
+

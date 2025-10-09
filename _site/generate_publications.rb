@@ -3,6 +3,32 @@ require 'bibtex'
 require 'yaml'
 require 'fileutils'
 
+# Simple LaTeX to UTF-8 converter
+def latex_to_utf8(str)
+  return '' if str.nil?
+
+  mapping = {
+    # Accents
+    '\\"a' => 'ä', '\\"o' => 'ö', '\\"u' => 'ü', '\\"A' => 'Ä', '\\"O' => 'Ö', '\\"U' => 'Ü',
+    "\\'a" => 'á', "\\'e" => 'é', "\\'i" => 'í', "\\'o" => 'ó', "\\'u" => 'ú',
+    "\\'A" => 'Á', "\\'E" => 'É', "\\'I" => 'Í', "\\'O" => 'Ó', "\\'U" => 'Ú',
+    "\\`a" => 'à', "\\`e" => 'è', "\\`i" => 'ì', "\\`o" => 'ò', "\\`u" => 'ù',
+    "\\`A" => 'À', "\\`E" => 'È', "\\`I" => 'Ì', "\\`O" => 'Ò', "\\`U" => 'Ù',
+    "\\^a" => 'â', "\\^e" => 'ê', "\\^i" => 'î', "\\^o" => 'ô', "\\^u" => 'û',
+    "\\^A" => 'Â', "\\^E" => 'Ê', "\\^I" => 'Î', "\\^O" => 'Ô', "\\^U" => 'Û',
+    "\\~n" => 'ñ', "\\~N" => 'Ñ',
+    "\\c{c}" => 'ç', "\\c{C}" => 'Ç',
+
+    # Symbols
+    '--' => '—', # em dash
+    '---' => '—', # em dash
+    "\\&" => '&'
+  }
+
+  mapping.each { |latex, utf8| str = str.gsub(latex, utf8) }
+  str
+end
+
 # Load BibTeX
 bib_file = "_bibliography/publications.bib"
 bib = BibTeX.open(bib_file)
@@ -13,10 +39,10 @@ publications = { 'index' => [], 'featured' => [] }
 bib.each do |entry|
   next unless entry.is_a?(BibTeX::Entry)
 
-  authors = entry[:author].to_s.strip
+  authors = latex_to_utf8(entry[:author].to_s.strip)
   authors = "Unknown Author" if authors.empty?
 
-  title = entry[:title].to_s.strip
+  title = latex_to_utf8(entry[:title].to_s.strip)
   title = "No Title" if title.empty?
 
   year = entry[:year].to_s.to_i rescue 0

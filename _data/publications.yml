@@ -15,14 +15,20 @@ index:
   cite: ''
   year: 2025
 - &3
-  name: Bahl, Henning and Elmer, Nina and Favaro, Luigi and Hau{\ss}mann, Manuel and
-    Plehn, Tilman and Winterhalder, Ramon (2024). {Accurate Surrogate Amplitudes with
-    Calibrated Uncertainties}.
+  name: Elmer, Nina Marie (2025). {Bridging Theory and Data — Uncertainty-Aware Analyses
+    for the LHC and Beyond}.
+  pdf: ''
+  arxiv: ''
+  cite: https://doi.org/10.11588/heidok.00036898
+  year: 2025
+- name: Bahl, Henning and Elmer, Nina and Favaro, Luigi and Haußmann, Manuel and Plehn,
+    Tilman and Winterhalder, Ramon (2024). {Accurate Surrogate Amplitudes with Calibrated
+    Uncertainties}.
   pdf: https://arxiv.org/pdf/2412.12069.pdf
   arxiv: https://arxiv.org/abs/2412.12069
   cite: ''
   year: 2024
-- name: Degenkolb, Skyler and Elmer, Nina and Modak, Tanmoy and M{\"u}hlleitner, Margarete
+- name: Degenkolb, Skyler and Elmer, Nina and Modak, Tanmoy and Mühlleitner, Margarete
     and Plehn, Tilman (2024). {A Global View of the EDM Landscape}.
   pdf: https://arxiv.org/pdf/2403.02052.pdf
   arxiv: https://arxiv.org/abs/2403.02052
