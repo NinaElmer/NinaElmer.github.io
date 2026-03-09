@@ -1,4 +1,4 @@
 ---
 layout: cv
-title: "Experience"
+title: "CV"
 ---

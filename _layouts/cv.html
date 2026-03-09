@@ -50,5 +50,31 @@ layout: default
     </div>
 
     <!-- Additional sections can follow the same pattern -->
+    <!-- Link to CV -->
+    <div class="row g-5 mb-5">
+      <div class="col-md-2">
+        <h4>CV</h4>
+      </div>
+      <div class="col-md-10">
+        {% for section in site.data.cv.cv %}
+          <p class="fw-bold">
+            {% if section.link %}
+              <a href="{{ section.link }}" target="_blank">{{ section.title }}</a>
+            {% else %}
+              {{ section.title }}
+            {% endif %}
+          </p>
+          <p>{{ section.description }}</p>
+
+          {% if section.notes %}
+            <ul>
+              {% for note in section.notes %}
+                <li>{{ note }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
   </div>
 </div>
