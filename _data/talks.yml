@@ -1,3 +1,9 @@
+- year: 2026
+  talks:
+    - name: "Learning reliable amplitude surrogates"
+      link: "/talks/ZPW26.pdf"
+      conference: "Zurich Phenomenology Workshop: Machie Learning for Particle Physics - Zurich, Switzerland"
+      info: "Invited talk"
 - year: 2025
   talks:
     - name: "Learning Reliable Uncertainties"

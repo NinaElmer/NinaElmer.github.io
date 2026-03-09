@@ -3,15 +3,17 @@ layout: home
 title: "Home"
 ---
 
-I am a postdoctoral researcher at the Centre for AI research in the Department of Applied Mathematics and Theoretical Physics (DAMTP) at the University of Cambridge. My work focuses on uncertainty-aware machine learning for LHC event generation, developing fast and precise surrogate models for scattering amplitudes that provide accurate predictions with well-calibrated uncertainties.
+I am a postdoctoral researcher at the Infosys -- Cambridge AI Centre in the Department of Applied Mathematics and Theoretical Physics (DAMTP) at the University of Cambridge. My work focuses on uncertainty-aware machine learning for LHC event generation, developing fast and precise surrogate models for scattering amplitudes that provide accurate predictions with well-calibrated uncertainties. 
 
-I am also interested in bridging particle physics and AI, creating methods to extract more precise information from both theoretical predictions and LHC data, building on my experience with global analyses using SMEFT and EDM measurements.
+I am also interested in bridging particle physics and AI, creating methods to extract more precise information from both theoretical predictions and LHC data, building on my experience with global analyses using SMEFT and EDM measurements. Working with AI, I mainly, but not only, focus on the trustworthiness of AI predictions by improving them through appropriate uncertainty introduction and handling, and on the interpretability of those results.  
 
 Research interests:
+
 - Statistical methods in particle physics
 - Surrogate networks
 - Uncertainty estimation with AI
-- Global analyses
+- Global analyses for SMEFT analyses
+- Amplification of generative networks
 
 
 <!-- I am a postdoctoral researcher at the Centre for AI in the Department of Applied Mathematics and Theoretical Physics (DAMTP) at the University of Cambridge. My research focuses on the development of uncertainty-aware machine learning methods for LHC event generation and beyond. In particular, I work on building fast, precise, and controllable surrogate models for scattering amplitudes, providing not only accurate predictions but also well-calibrated uncertainty estimates.
