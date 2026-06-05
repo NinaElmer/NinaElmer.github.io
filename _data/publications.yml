@@ -1,39 +1,46 @@
 ---
 index:
 - &1
+  name: De Crescenzo, Giovanni and Villadamigo, Javier Mari{ñ}o and Elmer, Nina and
+    Heimel, Theo and Plehn, Tilman and Winterhalder, Ramon and Zaro, Marco (2026).
+    {MadNIS at NLO}.
+  pdf: https://arxiv.org/pdf/2603.22407.pdf
+  arxiv: https://arxiv.org/abs/2603.22407
+  cite: ''
+  year: 2026
+- &2
   name: Bahl, Henning and Diefenbacher, Sascha and Elmer, Nina and Plehn, Tilman and
-    Spinner, Jonas (2025). {Forecasting Generative Amplification}.
+    Spinner, Jonas (2026). {Forecasting Generative Amplification}.
   pdf: https://arxiv.org/pdf/2509.08048.pdf
   arxiv: https://arxiv.org/abs/2509.08048
-  cite: ''
-  year: 2025
-- &2
-  name: Bahl, Henning and Elmer, Nina and Plehn, Tilman and Winterhalder, Ramon (2025).
+  cite: https://doi.org/10.21468/SciPostPhys.20.5.150
+  year: 2026
+- &3
+  name: Bahl, Henning and Elmer, Nina and Plehn, Tilman and Winterhalder, Ramon (2026).
     {Amplitude Uncertainties Everywhere All at Once}.
   pdf: https://arxiv.org/pdf/2509.00155.pdf
   arxiv: https://arxiv.org/abs/2509.00155
-  cite: ''
+  cite: https://doi.org/10.21468/SciPostPhys.20.3.083
+  year: 2026
+- name: Degenkolb, Skyler and Elmer, Nina and Modak, Tanmoy and M{ü}hlleitner, Margarete
+    and Plehn, Tilman (2026). {A Global View of the EDM Landscape}.
+  pdf: https://arxiv.org/pdf/2403.02052.pdf
+  arxiv: https://arxiv.org/abs/2403.02052
+  cite: https://doi.org/10.21468/SciPostPhys.20.6.151
+  year: 2026
+- name: Bahl, Henning and Elmer, Nina and Favaro, Luigi and Haussmann, Manuel and
+    Plehn, Tilman and Winterhalder, Ramon (2025). {Accurate surrogate amplitudes with
+    calibrated uncertainties}.
+  pdf: https://arxiv.org/pdf/2412.12069.pdf
+  arxiv: https://arxiv.org/abs/2412.12069
+  cite: https://doi.org/10.21468/SciPostPhysCore.8.4.073
   year: 2025
-- &3
-  name: Elmer, Nina Marie (2025). {Bridging Theory and Data — Uncertainty-Aware Analyses
+- name: Elmer, Nina Marie (2025). {Bridging Theory and Data — Uncertainty-Aware Analyses
     for the LHC and Beyond}.
   pdf: ''
   arxiv: ''
   cite: https://doi.org/10.11588/heidok.00036898
   year: 2025
-- name: Bahl, Henning and Elmer, Nina and Favaro, Luigi and Haußmann, Manuel and Plehn,
-    Tilman and Winterhalder, Ramon (2024). {Accurate Surrogate Amplitudes with Calibrated
-    Uncertainties}.
-  pdf: https://arxiv.org/pdf/2412.12069.pdf
-  arxiv: https://arxiv.org/abs/2412.12069
-  cite: ''
-  year: 2024
-- name: Degenkolb, Skyler and Elmer, Nina and Modak, Tanmoy and Mühlleitner, Margarete
-    and Plehn, Tilman (2024). {A Global View of the EDM Landscape}.
-  pdf: https://arxiv.org/pdf/2403.02052.pdf
-  arxiv: https://arxiv.org/abs/2403.02052
-  cite: ''
-  year: 2024
 - name: Elmer, Nina and Madigan, Maeve and Plehn, Tilman and Schmal, Nikita (2023).
     {Staying on Top of SMEFT-Likelihood Analyses}.
   pdf: https://arxiv.org/pdf/2312.12502.pdf

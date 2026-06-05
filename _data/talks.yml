@@ -1,5 +1,15 @@
 - year: 2026
   talks:
+    - name: "Trust Issues: Stress-Testing ML Uncertainites in PDF Fits"
+      conference: "IPPP Seminar, Durham, UK"
+      info: "Invited Seminar"
+    - name: "Can We Trust AI? -- Building Trustworthy AI Systems"
+      conference: "Infosys Industry Day, Cambridge, UK"
+    - name: "Bridging AI and Particle Physics"
+      conference: "London BSM Meeting, London, UK"
+      info: "Invited talk"
+    - name: "Reliable Uncertainty Estimation for Amplitude surrogates"
+      conference: "General MadGraph Meeting, Heidelberg, Germany"
     - name: "Learning reliable amplitude surrogates"
       link: "/talks/ZPW26.pdf"
       conference: "Zurich Phenomenology Workshop: Machie Learning for Particle Physics - Zurich, Switzerland"
