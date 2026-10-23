@@ -3,78 +3,42 @@ layout: default
 ---
 
 {{ content }}
-
-<div class="row g-5 mb-5">
-  <div>
-    <!-- Page Title -->
-    <h3 class="fw-bold pb-3 mb-5">Experience</h3>
-
-    <!-- Academic Experience -->
-    <div class="row g-5 mb-5">
-      <div class="col-md-2">
-        <h4>Academic Experience</h4>
-      </div>
-      <div class="col-md-10">
-        {% for section in site.data.cv.academic-experience %}
-          <p class="fw-bold">{{ section.title }}</p>
-          <p>{{ section.description }}</p>
-          {% if section.notes %}
-            <ul>
-              {% for note in section.notes %}
-                <li>{{ note }}</li>
-              {% endfor %}
-            </ul>
-          {% endif %}
-        {% endfor %}
-      </div>
+<section class="cv-section" aria-labelledby="cv-heading">
+  <h1 id="cv-heading">Experience</h1>
+  <section class="cv-group" aria-labelledby="academic-heading">
+    <h2 id="academic-heading">Academic experience</h2>
+    <div>
+      {% for section in site.data.cv.academic-experience %}
+        <article class="cv-entry">
+          <h3>{{ section.title | escape }}</h3>
+          <p class="entry-meta">{{ section.description | escape }}</p>
+          {% if section.notes %}<ul>{% for note in section.notes %}<li>{{ note | escape }}</li>{% endfor %}</ul>{% endif %}
+        </article>
+      {% endfor %}
     </div>
-
-    <!-- Education -->
-    <div class="row g-5 mb-5">
-      <div class="col-md-2">
-        <h4>Education</h4>
-      </div>
-      <div class="col-md-10">
-        {% for section in site.data.cv.education %}
-          <p class="fw-bold">{{ section.title }}</p>
-          <p>{{ section.description }}</p>
-          {% if section.notes %}
-            <ul>
-              {% for note in section.notes %}
-                <li>{{ note }}</li>
-              {% endfor %}
-            </ul>
-          {% endif %}
-        {% endfor %}
-      </div>
+  </section>
+  <section class="cv-group" aria-labelledby="education-heading">
+    <h2 id="education-heading">Education</h2>
+    <div>
+      {% for section in site.data.cv.education %}
+        <article class="cv-entry">
+          <h3>{{ section.title | escape }}</h3>
+          <p class="entry-meta">{{ section.description | escape }}</p>
+          {% if section.notes %}<ul>{% for note in section.notes %}<li>{{ note | escape }}</li>{% endfor %}</ul>{% endif %}
+        </article>
+      {% endfor %}
     </div>
-
-    <!-- Additional sections can follow the same pattern -->
-    <!-- Link to CV -->
-    <div class="row g-5 mb-5">
-      <div class="col-md-2">
-        <h4>CV</h4>
-      </div>
-      <div class="col-md-10">
-        {% for section in site.data.cv.cv %}
-          <p class="fw-bold">
-            {% if section.link %}
-              <a href="{{ section.link }}" target="_blank">{{ section.title }}</a>
-            {% else %}
-              {{ section.title }}
-            {% endif %}
-          </p>
-          <p>{{ section.description }}</p>
-
-          {% if section.notes %}
-            <ul>
-              {% for note in section.notes %}
-                <li>{{ note }}</li>
-              {% endfor %}
-            </ul>
-          {% endif %}
-        {% endfor %}
-      </div>
+  </section>
+  <section class="cv-group" aria-labelledby="download-heading">
+    <h2 id="download-heading">Full CV</h2>
+    <div>
+      {% for section in site.data.cv.cv %}
+        <div class="cv-entry">
+          <p>{% if section.link %}<a href="{{ section.link | relative_url }}" target="_blank" rel="noopener noreferrer">{{ section.title | escape }} <span class="download-label">PDF <span aria-hidden="true">&nearr;</span></span></a>{% else %}{{ section.title | escape }}{% endif %}</p>
+          {% if section.description %}<p class="entry-meta">{{ section.description | escape }}</p>{% endif %}
+          {% if section.notes %}<ul>{% for note in section.notes %}<li>{{ note | escape }}</li>{% endfor %}</ul>{% endif %}
+        </div>
+      {% endfor %}
     </div>
-  </div>
-</div>
+  </section>
+</section>

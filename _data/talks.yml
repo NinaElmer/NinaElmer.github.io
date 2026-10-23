@@ -1,83 +1,136 @@
+---
 - year: 2026
   talks:
-    - name: "Trust Issues: Stress-Testing ML Uncertainites in PDF Fits"
-      conference: "IPPP Seminar, Durham, UK"
-      info: "Invited Seminar"
-    - name: "Can We Trust AI? -- Building Trustworthy AI Systems"
-      conference: "Infosys Industry Day, Cambridge, UK"
-    - name: "Bridging AI and Particle Physics"
-      conference: "London BSM Meeting, London, UK"
-      info: "Invited talk"
-    - name: "Reliable Uncertainty Estimation for Amplitude surrogates"
-      conference: "General MadGraph Meeting, Heidelberg, Germany"
-    - name: "Learning reliable amplitude surrogates"
-      link: "/talks/ZPW26.pdf"
-      conference: "Zurich Phenomenology Workshop: Machie Learning for Particle Physics - Zurich, Switzerland"
-      info: "Invited talk"
+  - name: 'When Do ML Uncertainties Fail? - A PDF fit case study'
+    conference: Boost 2026 Conference — Krakow, Poland
+    month: 7
+    category: Conference / workshop
+    info: Invited seminar
+  - name: 'From Amplitudes to PDFs: Uncertainty-Aware ML'
+    conference: Nikhef Theory Seminar — Amsterdam, Netherlands
+    month: 6
+    category: Seminar
+    info: Invited seminar
+  - name: 'Trust Issues: Stress-Testing ML Uncertainties in PDF Fits'
+    conference: IPPP Seminar — Durham, UK
+    month: 5
+    category: Seminar
+    info: Invited seminar
+  - name: Can We Trust AI? — Building Trustworthy AI Systems
+    conference: Infosys Industry Day — Cambridge, UK
+    month: 5
+    category: Other
+  - name: Bridging AI and Particle Physics
+    conference: London BSM Meeting — London, UK
+    month: 4
+    category: Conference / workshop
+    info: Invited talk
+  - name: Reliable Uncertainty Estimation for Amplitude Surrogates
+    conference: General MadGraph Meeting — Heidelberg, Germany
+    month: 2
+    category: Conference / workshop
+  - name: Learning Reliable Amplitude Surrogates
+    conference: Zurich Phenomenology Workshop — Zurich, Switzerland
+    month: 1
+    category: Conference / workshop
+    info: Invited talk
+    link: "/talks/ZPW26.pdf"
 - year: 2025
   talks:
-    - name: "Learning Reliable Uncertainties"
-      link: "/talks/ACAT25.pdf"
-      conference: "ACAT 2025 conference — Hamburg, Germany"
-    - name: "Accuracy and uncertainty control for ML-Amplitudes"
-      link: "/talks/KISS25.pdf"
-      conference: "KISS BMBF Annual meeting — Munich, Germany"
-      info: "Invited talk"
-    - name: "Learned Uncertainties for LHC-Networks"
-      link: "/talks/MG_meeting25.pdf"
-      conference: "MadGraph5_aMC@NLO meeting - CERN, Switzerland"
-    - name: "Using amplitudes for accuracy and uncertainty estimation in ML"
-      link: "/talks/COMETA25.pdf"
-      conference: "COMETA Working Group Meeting - Online"
-      info: "Invited talk"
-
+  - name: Learning Reliable Uncertainties — The Return of the Ensemble
+    conference: ACAT 2025 conference — Hamburg, Germany
+    month: 9
+    category: Conference / workshop
+    link: "/talks/ACAT25.pdf"
+  - name: Accuracy and Uncertainty Control for ML-Amplitudes
+    conference: KISS BMBF Annual Meeting — Munich, Germany
+    month: 3
+    category: Conference / workshop
+    info: Invited talk
+    link: "/talks/KISS25.pdf"
+  - name: Learned Uncertainties for LHC-Networks
+    conference: MadGraph5_aMC@NLO Meeting — CERN
+    month: 2
+    category: Conference / workshop
+    link: "/talks/MG_meeting25.pdf"
+  - name: Using Amplitudes for Accuracy and Uncertainty Estimation in ML
+    conference: COMETA Working Group Meeting — Online
+    month: 1
+    category: Seminar
+    info: Invited seminar
+    link: "/talks/COMETA25.pdf"
 - year: 2024
   talks:
-    - name: "Accuracy and Uncertainties for ML-Amplitudes"
-      link: "/talks/Nikhef_seminar.pdf"
-      conference: "Nikhef Theory Seminar — Amsterdam, Netherlands"
-      info: "Invited Seminar"
-    - name: "The good, the bad, and the Bayesian"
-      link: "/talks/ML4Jets24.pdf"
-      conference: "ML4Jets Conference — Paris, France"
-    - name: "Uncertainty-aware machine learning for the LHC"
-      conference: "PHYSTAT - Statistics meet AI — London, UK"
-      info: "Poster"
-    - name: "The Impact of Theory Uncertainties in Global EDM Analyses"
-      link: "/talks/Frascati24.pdf"
-      conference: "IRN Terascale Meeting — Frascati, Italy"
-    - name: "A Global EDM Analysis with Theory Uncertainties"
-      link: "/talks/EDM_workshop.pdf"
-      conference: "EDM Workshop — Trento, Italy"
-      info: "Invited Talk"
-    - name: "A global interpretation of EDMs"
-      link: "/talks/EDM_CRC.pdf"
-      conference: "Annual Meeting of the CRC TRR 257 — Karlsruhe, Germany"
-      info: "Invited Talk"
-
+  - name: Accuracy and Uncertainties for ML-Amplitudes
+    conference: Nikhef Theory Seminar — Amsterdam, Netherlands
+    month: 12
+    category: Seminar
+    info: Invited seminar
+    link: "/talks/Nikhef_seminar.pdf"
+  - name: The Good, the Bad, and the Bayesian
+    conference: ML4Jets Conference — Paris, France
+    month: 11
+    category: Conference / workshop
+    link: "/talks/ML4Jets24.pdf"
+  - name: The Impact of Likelihoods on SMEFT Global Analyses
+    conference: Particle Theory Seminar — Würzburg, Germany
+    month: 10
+    category: Seminar
+    info: Invited seminar
+  - name: Uncertainty-Aware Machine Learning for the LHC
+    conference: PHYSTAT — Statistics meet AI — London, UK
+    month: 9
+    category: Conference / workshop
+    info: Poster
+  - name: The Impact of Theory Uncertainties in Global EDM Analyses
+    conference: IRN Terascale Meeting — Frascati, Italy
+    month: 4
+    category: Conference / workshop
+    link: "/talks/Frascati24.pdf"
+  - name: A Global Interpretation of EDMs
+    conference: Annual Meeting of the CRC TRR 257 — Karlsruhe, Germany
+    month: 3
+    category: Conference / workshop
+    info: Invited talk
+    link: "/talks/EDM_CRC.pdf"
+  - name: A Global EDM Analysis with Theory Uncertainties
+    conference: EDM Workshop — Trento, Italy
+    month: 3
+    category: Conference / workshop
+    info: Invited talk
+    link: "/talks/EDM_workshop.pdf"
 - year: 2023
   talks:
-    - name: "Global analysis: The true constraining power of different EDM measurements"
-      link: "/talks/Marseille23.pdf"
-      conference: "IRN Terascale Meeting — Marseille, France"
-    - name: "From Higgs to Top - A global SMEFT analysis"
-      link: "/talks/Pheno23.pdf"
-      conference: "Pheno Conference — Pittsburgh, USA"
-    - name: "From Higgs to Top - A global SMEFT analysis"
-      link: "/talks/BNL23.pdf"
-      conference: "BNL Lunch Seminar — Brookhaven, USA"
-      info: "Invited Seminar"
-    - name: "Profiling and Marginalization in a global SMEFT analysis"
-      link: "/talks/ALPS23.pdf"
-      conference: "ALPS Conference — Obergurgl, Austria"
-
+  - name: 'Global Analysis: The True Constraining Power of Different EDM Measurements'
+    conference: IRN Terascale Meeting — Marseille, France
+    month: 10
+    category: Conference / workshop
+    link: "/talks/Marseille23.pdf"
+  - name: 'From Higgs to Top: A Global SMEFT Analysis'
+    conference: Pheno Conference — Pittsburgh, USA
+    month: 5
+    category: Conference / workshop
+    link: "/talks/Pheno23.pdf"
+  - name: 'From Higgs to Top: A Global SMEFT Analysis'
+    conference: BNL Lunch Seminar — Brookhaven, USA
+    month: 5
+    category: Seminar
+    info: Invited seminar
+    link: "/talks/BNL23.pdf"
+  - name: Profiling and Marginalization in a Global SMEFT Analysis
+    conference: ALPS Conference — Obergurgl, Austria
+    month: 3
+    category: Conference / workshop
+    link: "/talks/ALPS23.pdf"
 - year: 2022
   talks:
-    - name: "To Profile or to Marginalize: A SMEFT case study"
-      link: "/talks/Higgs22.pdf"
-      conference: "Higgs Conference — Pisa, Italy"
-    - name: "To Profile or to Marginalize: A SMEFT case study"
-      link: "/talks/DESYTH22.pdf"
-      conference: "DESY Theory Workshop — Hamburg, Germany"
-
-
+  - name: 'To Profile or to Marginalize: A SMEFT Case Study'
+    conference: Higgs Conference — Pisa, Italy
+    month: 11
+    category: Conference / workshop
+    link: "/talks/Higgs22.pdf"
+  - name: 'To Profile or to Marginalize: A SMEFT Case Study'
+    conference: DESY Theory Workshop — Hamburg, Germany
+    month: 9
+    category: Conference / workshop
+    link: "/talks/DESYTH22.pdf"

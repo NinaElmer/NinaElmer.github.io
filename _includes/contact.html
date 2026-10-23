@@ -1,34 +1,14 @@
-<div class="row g-5 mb-5">
-  <div>
-    <h3 class="fw-bold pb-3 mb-5">Contact</h3>
-    {% for contact in site.data.settings.contacts %}
-      <div class="row g-5 mb-5 align-items-center">
-        <div class="col-md-6">
-          <h4>{{ contact.name }}</h4>
-          <p>{{ contact.department }}</p>
-          <p>{{ contact.institution }}<br>{{ contact.institution_address }}</p>
-
-          {% if contact.email %}
-            <p>
-              Email: 
-              <a href="mailto:{{ contact.email }}" style="text-decoration:none;">
-                {{ contact.email }}
-              </a>
-            </p>
-          {% endif %}
-
-          <!-- Optional fields:
-          {% if contact.phone %}<p>Phone: {{ contact.phone }}</p>{% endif %}
-          {% if contact.office %}<p>Office: {{ contact.office }}</p>{% endif %}
-          -->
-        </div>
-        <div class="col-md-6">
-          {% if contact.image %}
-            <img src="{{ site.github.url }}/{{ contact.image }}" alt="Contact" width="80%">
-          {% endif %}
-        </div>
+<section aria-labelledby="contact-heading">
+  <h1 id="contact-heading">Contact</h1>
+  {% for contact in site.data.settings.contacts %}
+    <div class="contact-details">
+      <div>
+        <h2>{{ contact.name | escape }}</h2>
+        <p class="entry-meta">{{ contact.department | escape }}</p>
+        <p>{{ contact.institution | escape }}<br>{{ contact.institution_address | escape }}</p>
+        {% if contact.email %}<p>{{ contact.email | escape }}</p>{% endif %}
       </div>
-    {% endfor %}
-  </div>
-</div>
-
+      {% if contact.image %}<img class="contact-photo" src="{{ contact.image | relative_url }}" alt="{{ contact.name | escape }}" width="220" loading="lazy">{% endif %}
+    </div>
+  {% endfor %}
+</section>

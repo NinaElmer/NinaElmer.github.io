@@ -3,36 +3,27 @@ layout: default
 ---
 
 {{ content }}
-<div class="row g-5 mb-5">
-  <div>
-    <!-- Main heading -->
-    <h2 class="fw-bold mb-4">Talks</h2>
-
-    {% for year_group in site.data.talks %}
-      <!-- Year as subheading -->
-      <h3 class="fw-bold mt-4 mb-3">{{ year_group.year }}</h3>
-      <ul class="list-unstyled mb-3">
+<section class="talks-section" aria-labelledby="talks-heading">
+  <h1 id="talks-heading">Talks</h1>
+  {% assign months = 'January,February,March,April,May,June,July,August,September,October,November,December' | split: ',' %}
+  {% for year_group in site.data.talks %}
+    <section class="talk-year" aria-labelledby="year-{{ year_group.year }}">
+      <h2 id="year-{{ year_group.year }}">{{ year_group.year }}</h2>
+      <ul class="talk-list">
         {% for talk in year_group.talks %}
-          <li class="mb-3">
-            <!-- Talk name with optional link -->
-            <strong>
-              {% if talk.link %}
-                <a href="{{ talk.link }}" target="_blank">{{ talk.name }}</a>
+          <li class="talk">
+            <h3 class="talk-title">
+              {% if talk.link and talk.link != '' %}
+                <a href="{{ talk.link | relative_url }}" target="_blank" rel="noopener noreferrer">{{ talk.name | escape }}</a>
               {% else %}
-                {{ talk.name }}
+                {{ talk.name | escape }}
               {% endif %}
-            </strong><br>
-
-            <!-- Conference and info with same style -->
-            {% if talk.conference %}
-              <span class="text-muted">{{ talk.conference }}</span><br>
-            {% endif %}
-            {% if talk.info %}
-              <span class="text-muted">{{ talk.info }}</span>
-            {% endif %}
+            </h3>
+            {% if talk.conference %}<p class="entry-meta">{{ talk.conference | escape }}</p>{% endif %}
+            <p class="entry-note">{% if talk.month %}{% assign month_index = talk.month | minus: 1 %}{{ months[month_index] }}{% endif %}{% if talk.info %}{% if talk.month %} · {% endif %}{{ talk.info | escape }}{% elsif talk.category %}{% if talk.month %} · {% endif %}{{ talk.category | escape }}{% endif %}</p>
           </li>
         {% endfor %}
       </ul>
-    {% endfor %}
-  </div>
-</div>
+    </section>
+  {% endfor %}
+</section>

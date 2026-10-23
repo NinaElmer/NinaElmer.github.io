@@ -1,31 +1,55 @@
 {% if page.title == "Home" %}
-  {% assign publications = site.data.publications.featured %}
+  {% assign publications = site.data.publications.index | slice: 0, 3 %}
+  {% assign publication_heading = 'h3' %}
 {% else %}
   {% assign publications = site.data.publications.index %}
+  {% assign publication_heading = 'h2' %}
 {% endif %}
 
-
-<div class="row g-2 mb-3">
-  <div>
-    <h3 class="fw-bold mb-3">Publications</h3>
-
-    {% for pub in publications %}
-      {% assign clean_title = pub.name | replace: '{', '' | replace: '}', '' %}
-      <p class="mb-2" style="line-height:1.4;">
-        {{ clean_title }}
-        {% assign links = "" %}
-        {% if pub.pdf %}
-          {% assign links = links | append: '<a href="' | append: pub.pdf | append: '" target="_blank" style="color:#0d47a1; font-weight:bold;">PDF</a>' %}
-        {% endif %}
-        {% if pub.cite %}
-          {% assign links = links | append: ' | <a href="' | append: pub.cite | append: '" target="_blank" style="color:#0d47a1; font-weight:bold;">Cite</a>' %}
-        {% endif %}
-        {% if pub.arxiv %}
-          {% assign links = links | append: ' | <a href="' | append: pub.arxiv | append: '" target="_blank" style="color:#0d47a1; font-weight:bold;">arXiv</a>' %}
-        {% endif %}
-        {% if links != "" %} &mdash; {{ links | raw }}{% endif %}
-      </p>
-    {% endfor %}
+<section class="publications-section" aria-labelledby="publications-heading">
+  <div class="section-heading">
+    {% if page.title == "Home" %}
+      <h2 id="publications-heading">Selected publications</h2>
+      <a class="section-more" href="{{ '/publications.html' | relative_url }}">All publications <span aria-hidden="true">&rarr;</span></a>
+    {% else %}
+      <h1 id="publications-heading">Publications</h1>
+    {% endif %}
   </div>
-</div>
-
+  <ol class="publication-list">
+    {% for pub in publications %}
+      <li class="publication">
+        {% if pub.title and pub.title != '' %}
+          <{{ publication_heading }} class="publication-title">{{ pub.title | escape }}</{{ publication_heading }}>
+          <p class="publication-meta">
+            {%- assign authors = pub.authors | split: ', ' -%}
+            {%- for author in authors -%}
+              {%- assign author_name = author | strip -%}
+              {%- if site.publication_author_names contains author_name -%}
+                <strong>{{ author_name | escape }}</strong>
+              {%- else -%}
+                {{ author_name | escape }}
+              {%- endif -%}
+              {%- unless forloop.last -%}, {% endunless -%}
+            {%- endfor %}
+            <span class="publication-year">({{ pub.year }})</span>
+          </p>
+          {% if pub.venue %}<p class="publication-venue">{% if pub.status %}{{ pub.status | escape }} · {% endif %}{{ pub.venue | escape }}</p>{% endif %}
+        {% else %}
+          {% assign legacy_citation = pub.name | remove: '{' | remove: '}' %}
+          <p class="publication-title">{{ legacy_citation | escape }}</p>
+        {% endif %}
+        <div class="publication-links" role="group" aria-label="Links for {{ pub.title | default: pub.name | escape }}">
+          {% if pub.pdf and pub.pdf != '' %}
+            <a href="{{ pub.pdf | relative_url }}" target="_blank" rel="noopener noreferrer">PDF<span class="visually-hidden"> (opens in a new tab)</span></a>
+          {% endif %}
+          {% if pub.arxiv and pub.arxiv != '' %}
+            <a href="{{ pub.arxiv }}" target="_blank" rel="noopener noreferrer">arXiv<span class="visually-hidden"> (opens in a new tab)</span></a>
+          {% endif %}
+          {% if pub.cite and pub.cite != '' %}
+            <a href="{{ pub.cite }}" target="_blank" rel="noopener noreferrer">DOI<span class="visually-hidden"> (opens in a new tab)</span></a>
+          {% endif %}
+        </div>
+      </li>
+    {% endfor %}
+  </ol>
+</section>

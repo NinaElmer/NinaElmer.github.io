@@ -2,25 +2,16 @@
 layout: default
 ---
 
-<div class="row g-5 mb-5">
-  <div class="col-md-12">
-    <h3 class="fw-bold">About Me</h3>
-    {{ content }}
+<section class="about-section" aria-labelledby="about-heading">
+  <div class="intro-heading">
+    <h1 id="about-heading">About me</h1>
   </div>
-</div>
+  {% if site.profile_image and site.show_profile_image != false %}
+    <!-- <img class="profile-portrait" src="{{ site.profile_image | relative_url }}" alt="{{ site.title | escape }}" width="240" height="205"> -->
+  {% endif %}
+  <div class="intro-copy">{{ content }}</div>
+</section>
 
-<!-- Small profile picture in top-right corner -->
-<!-- <img src="{{ site.github.url }}/assets/images/profile.jpg" 
-     alt="Profile" 
-     class="profile-top-left"> -->
+{% include news.html %}
 
 {% include publications.html %}
-
-<!-- <div class="row g-5 mb-5">
-  <div class="col-md-12">
-    <h3 class="fw-bold border-bottom pb-3 mb-5">Updates</h3>
-    {% for post in site.posts %}
-      <p><a href="{{ site.github.url }}/{{ post.url }}">{{ post.title }}</a> - {{ post.date | date: "%B %-d, %Y" }}</p>
-    {% endfor %}
-  </div>
-</div> -->

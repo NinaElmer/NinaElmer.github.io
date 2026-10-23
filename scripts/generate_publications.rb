@@ -35,6 +35,8 @@ bib = BibTeX.open(bib_file)
 
 # Prepare output
 publications = { 'index' => [], 'featured' => [] }
+# Keep editorial metadata when refreshing bibliographic records.
+existing = File.exist?('_data/publications.yml') ? YAML.safe_load_file('_data/publications.yml', aliases: true).fetch('index', []) : []
 
 bib.each do |entry|
   next unless entry.is_a?(BibTeX::Entry)
@@ -67,14 +69,17 @@ bib.each do |entry|
   # Detect DOI/Cite
   doi = entry[:doi].to_s
   cite = doi.empty? ? '' : (doi.start_with?('http') ? doi : "https://doi.org/#{doi}")
+  previous = existing.find { |pub| (!arxiv.empty? && pub['arxiv'] == arxiv) || (!cite.empty? && pub['cite'] == cite) } || {}
 
   publications['index'] << {
     'name' => citation,
+    'title' => title.delete('{}'),
+    'authors' => authors.delete('{}').split(' and ').map { |author| author.split(', ', 2).reverse.join(' ') }.join(', '),
     'pdf' => pdf,
     'arxiv' => arxiv,
     'cite' => cite,
     'year' => year
-  }
+  }.merge(previous.slice('status', 'venue', 'first_author'))
 end
 
 # Sort descending by year

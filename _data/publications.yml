@@ -1,6 +1,17 @@
 ---
 index:
 - &1
+  title: 'Faithful Uncertainties in ML-Based Inverse Problems: GPs, NNs and NTKs for
+    the Triplet PDF'
+  authors: Nina Elmer, Sven Krippendorf, Maria Ubiali
+  year: 2026
+  pdf: https://arxiv.org/pdf/2610.30239
+  arxiv: https://arxiv.org/abs/2610.30239
+  cite: ''
+  status: Preprint
+  venue: arXiv:2610.30239 [hep-ph]
+  first_author: true
+- &2
   name: De Crescenzo, Giovanni and Villadamigo, Javier Mari{ñ}o and Elmer, Nina and
     Heimel, Theo and Plehn, Tilman and Winterhalder, Ramon and Zaro, Marco (2026).
     {MadNIS at NLO}.
@@ -8,26 +19,46 @@ index:
   arxiv: https://arxiv.org/abs/2603.22407
   cite: ''
   year: 2026
-- &2
+  title: MadNIS at NLO
+  authors: Giovanni De Crescenzo, Javier Mariño Villadamigo, Nina Elmer, Theo Heimel,
+    Tilman Plehn, Ramon Winterhalder, Marco Zaro
+  venue: Submitted to SciPost
+  status: Preprint
+- &3
   name: Bahl, Henning and Diefenbacher, Sascha and Elmer, Nina and Plehn, Tilman and
     Spinner, Jonas (2026). {Forecasting Generative Amplification}.
   pdf: https://arxiv.org/pdf/2509.08048.pdf
   arxiv: https://arxiv.org/abs/2509.08048
   cite: https://doi.org/10.21468/SciPostPhys.20.5.150
   year: 2026
-- &3
-  name: Bahl, Henning and Elmer, Nina and Plehn, Tilman and Winterhalder, Ramon (2026).
+  title: Forecasting Generative Amplification
+  authors: Henning Bahl, Sascha Diefenbacher, Nina Elmer, Tilman Plehn, Jonas Spinner
+  venue: SciPost Physics 20 (2026) 150
+  first_author: false
+  status: Peer-reviewed
+- name: Bahl, Henning and Elmer, Nina and Plehn, Tilman and Winterhalder, Ramon (2026).
     {Amplitude Uncertainties Everywhere All at Once}.
   pdf: https://arxiv.org/pdf/2509.00155.pdf
   arxiv: https://arxiv.org/abs/2509.00155
   cite: https://doi.org/10.21468/SciPostPhys.20.3.083
   year: 2026
+  title: Amplitude Uncertainties Everywhere All at Once
+  authors: Henning Bahl, Nina Elmer, Tilman Plehn, Ramon Winterhalder
+  venue: SciPost Physics 20 (2026) 083
+  first_author: true
+  status: Peer-reviewed
 - name: Degenkolb, Skyler and Elmer, Nina and Modak, Tanmoy and M{ü}hlleitner, Margarete
     and Plehn, Tilman (2026). {A Global View of the EDM Landscape}.
   pdf: https://arxiv.org/pdf/2403.02052.pdf
   arxiv: https://arxiv.org/abs/2403.02052
   cite: https://doi.org/10.21468/SciPostPhys.20.6.151
   year: 2026
+  title: A Global View of the EDM Landscape
+  authors: Skyler Degenkolb, Nina Elmer, Tanmoy Modak, Margarete Mühlleitner, Tilman
+    Plehn
+  venue: SciPost Physics 20 (2026) 151
+  first_author: true
+  status: Peer-reviewed
 - name: Bahl, Henning and Elmer, Nina and Favaro, Luigi and Haussmann, Manuel and
     Plehn, Tilman and Winterhalder, Ramon (2025). {Accurate surrogate amplitudes with
     calibrated uncertainties}.
@@ -35,25 +66,46 @@ index:
   arxiv: https://arxiv.org/abs/2412.12069
   cite: https://doi.org/10.21468/SciPostPhysCore.8.4.073
   year: 2025
+  title: Accurate surrogate amplitudes with calibrated uncertainties
+  authors: Henning Bahl, Nina Elmer, Luigi Favaro, Manuel Haussmann, Tilman Plehn,
+    Ramon Winterhalder
+  venue: SciPost Physics Core 8 (2025) 073
+  first_author: true
+  status: Peer-reviewed
 - name: Elmer, Nina Marie (2025). {Bridging Theory and Data — Uncertainty-Aware Analyses
     for the LHC and Beyond}.
   pdf: ''
   arxiv: ''
   cite: https://doi.org/10.11588/heidok.00036898
   year: 2025
+  title: Bridging Theory and Data — Uncertainty-Aware Analyses for the LHC and Beyond
+  authors: Nina Marie Elmer
+  venue: PhD thesis, Heidelberg University (2025)
+  status: Thesis
 - name: Elmer, Nina and Madigan, Maeve and Plehn, Tilman and Schmal, Nikita (2023).
     {Staying on Top of SMEFT-Likelihood Analyses}.
   pdf: https://arxiv.org/pdf/2312.12502.pdf
   arxiv: https://arxiv.org/abs/2312.12502
   cite: https://doi.org/10.21468/SciPostPhys.18.3.108
-  year: 2023
+  year: 2025
+  title: Staying on Top of SMEFT-Likelihood Analyses
+  authors: Nina Elmer, Maeve Madigan, Tilman Plehn, Nikita Schmal
+  venue: SciPost Physics 18 (2025) 108
+  first_author: false
+  status: Peer-reviewed
 - name: Brivio, Ilaria and Bruggisser, Sebastian and Elmer, Nina and Geoffray, Emma
     and Luchmann, Michel and Plehn, Tilman (2022). {To profile or to marginalize -
     A SMEFT case study}.
   pdf: https://arxiv.org/pdf/2208.08454.pdf
   arxiv: https://arxiv.org/abs/2208.08454
   cite: https://doi.org/10.21468/SciPostPhys.16.1.035
-  year: 2022
+  year: 2024
+  title: To profile or to marginalize - A SMEFT case study
+  authors: Ilaria Brivio, Sebastian Bruggisser, Nina Elmer, Emma Geoffray, Michel
+    Luchmann, Tilman Plehn
+  venue: SciPost Physics 16 (2024) 035
+  first_author: false
+  status: Peer-reviewed
 featured:
 - *1
 - *2

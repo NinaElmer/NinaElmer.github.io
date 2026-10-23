@@ -3,3 +3,16 @@ baseurl: "" # the subpath of your site, e.g. /blog
 title: "Nina Elmer" # the name of your site, e.g. ACME Corp.
 description: " AI Fellow"
 organization: "Infosys - Cambridge AI Center, DAMTP, University of Cambridge"
+
+profile_image: "/assets/img/NElmer.jpg"
+show_profile_image: true
+publication_author_names: ["Nina Elmer", "Nina Marie Elmer"]
+
+# Repository documentation and tools are not public website assets.
+exclude:
+  - README.md
+  - LICENSE.txt
+  - Gemfile
+  - Gemfile.lock
+  - scripts
+  - vendor

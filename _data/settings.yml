@@ -1,27 +1,16 @@
 menu:
-# - {name: 'people', url: '/people'}
-- {name: 'publications', url: '/publications'}
-# - {name: 'courses', url: '/courses'}
-- {name: 'cv', url: '/cv'}
-- {name: 'talks', url: '/talks'}
+- {name: 'publications', url: '/publications.html'}
+- {name: 'cv', url: '/cv.html'}
+- {name: 'talks', url: '/talks.html'}
+- {name: 'teaching', url: '/teaching'}
 - {name: 'contact', url: '/contact'}
 
-people:
-- {name: 'Primary Investigator', title: 'Researcher', department: 'Physics & Astronomy', institution: 'Some University', institution_address: '1 Main Street, Canada', phone: '(000) 000-0000', email: 'hello@university.edu', office: 'Science Building 505', image: 'assets/img/primary-investigator.jpg', url: 'primary-investigator'}
-- {name: 'Lab Technician', title: 'Researcher', department: 'Physics & Astronomy', institution: 'Some University', institution_address: '1 Main Street, Canada', phone: '(000) 000-0000', email: 'hello@university.edu', office: 'Science Building 505', image: 'assets/img/lab-technician.jpg', url: 'lab-technician'}
-- {name: 'Graduate Student', title: 'Researcher', department: 'Physics & Astronomy', institution: 'Some University', institution_address: '1 Main Street, Canada', phone: '(000) 000-0000', email: 'hello@university.edu', office: 'Science Building 505', image: 'assets/img/graduate-student.jpg', url: 'graduate-student'}
-
-courses:
-- {name: 'Vector Calculus', url: 'vector-calculus'}
-- {name: 'Quantum Mechanics', url: 'quantum-mechanics'}
-- {name: 'Stellar Structures', url: 'stellar-structures'}
-
 social:
-- {icon: 'github', link: 'https://github.com/NinaElmer'}
-- {icon: 'linkedin', link: 'https://www.linkedin.com/in/nina-elmer-07a22919a/'}
-- {icon_html: '@', link: 'mailto:nme24@cam.ac.uk'}
-- {icon: 'orcid', link: 'https://orcid.org/0000-0001-9579-6010'}
-- {icon: 'google', link: 'https://scholar.google.com/citations?user=7FplwPcAAAAJ&hl=de'}
+- {title: 'GitHub', icon: 'github', link: 'https://github.com/NinaElmer'}
+- {title: 'LinkedIn', icon: 'linkedin', link: 'https://www.linkedin.com/in/nina-elmer-07a22919a/'}
+- {title: 'Email', icon_html: '@', link: 'mailto:nme24@cam.ac.uk'}
+- {title: 'ORCID', icon: 'orcid', link: 'https://orcid.org/0000-0001-9579-6010'}
+- {title: 'Google Scholar', icon: 'google', link: 'https://scholar.google.com/citations?user=7FplwPcAAAAJ&hl=de'}
 
 contacts:
-- {name: 'Dr. Nina Elmer', department: 'Center for AI research, DAMTP', institution: 'University of Cambridge', institution_address: 'Wilberforce Road, Cambridge, CB3 0WA', email: 'nme24@cam.ac.uk', image: 'assets/img/contact.jpeg'}
+- {name: 'Dr. Nina Elmer', department: 'Center for AI research, DAMTP', institution: 'University of Cambridge', institution_address: 'Wilberforce Road, Cambridge, CB3 0WA', email: 'nme24 at cam.ac.uk', image: 'assets/img/contact.jpeg'}
