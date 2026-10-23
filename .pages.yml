@@ -1,0 +1,307 @@
+# Browser editor: https://app.pagescms.org
+settings:
+  content:
+    # Keep template settings and other keys that are not exposed in the editor.
+    merge: true
+
+media:
+  - name: images
+    label: Photos
+    input: assets/img
+    output: /assets/img
+    categories: [image]
+  - name: slides
+    label: Talk slides
+    input: talks
+    output: /talks
+    extensions: [pdf]
+  - name: papers
+    label: Publication PDFs
+    input: publications
+    output: /publications
+    extensions: [pdf]
+  - name: cv
+    label: CV PDFs
+    input: cv
+    output: /cv
+    extensions: [pdf]
+
+content:
+  - name: about
+    label: About me
+    type: file
+    path: index.md
+    format: yaml-frontmatter
+    operations: {delete: false}
+    fields:
+      - name: layout
+        type: string
+        hidden: true
+      - name: title
+        type: string
+        hidden: true
+      - name: body
+        label: Introduction and research interests
+        type: rich-text
+
+  - name: news
+    label: News
+    type: file
+    path: _data/news.yml
+    format: yaml
+    list: true
+    operations: {delete: false}
+    fields:
+      - name: date
+        label: Date
+        type: date
+        required: true
+        description: Only the month and year appear on the website. Use the first day when the exact date is not needed.
+      - name: text
+        label: Update
+        type: text
+        required: true
+      - name: link
+        label: Optional link
+        type: string
+      - name: link_label
+        label: Link text
+        type: string
+        description: Defaults to Read more.
+
+  - name: teaching
+    label: Teaching
+    type: file
+    path: teaching.md
+    format: yaml-frontmatter
+    operations: {delete: false}
+    fields:
+      - name: layout
+        type: string
+        hidden: true
+      - name: title
+        type: string
+        hidden: true
+      - name: body
+        label: Teaching experience and course materials
+        type: rich-text
+
+  - name: publications
+    label: Publications
+    type: file
+    path: _data/publications.yml
+    format: yaml
+    operations: {delete: false}
+    fields:
+      - name: index
+        label: Papers
+        type: object
+        description: Keep newest papers first. The first three also appear on the homepage.
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+        fields:
+          - name: title
+            label: Paper title
+            type: text
+            required: true
+          - name: authors
+            label: Authors
+            type: text
+            description: Names in display order, separated by commas.
+            required: true
+          - name: name
+            label: Legacy citation
+            type: text
+            hidden: true
+          - name: year
+            label: Year
+            type: number
+            required: true
+          - name: status
+            label: Publication status
+            type: string
+            description: Peer-reviewed, Preprint or Thesis.
+          - name: venue
+            label: Journal citation or submission details
+            type: string
+          - name: pdf
+            label: PDF link
+            type: string
+            description: Paste a PDF URL, or upload in Publication PDFs and enter /publications/filename.pdf.
+          - name: arxiv
+            label: arXiv link
+            type: string
+          - name: cite
+            label: DOI link
+            type: string
+            description: Full link, for example https://doi.org/10.example/paper.
+
+  - name: talks
+    label: Talks
+    type: file
+    path: _data/talks.yml
+    format: yaml
+    list: true
+    operations: {delete: false}
+    fields:
+      - name: year
+        label: Year
+        type: number
+        required: true
+      - name: talks
+        label: Talks in this year
+        type: object
+        description: Keep the newest talks and year groups first.
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{name}"
+        fields:
+          - name: name
+            label: Talk title
+            type: string
+            required: true
+          - name: conference
+            label: Event and location
+            type: string
+          - name: month
+            label: Month
+            type: number
+            description: Month number, from 1 (January) to 12 (December).
+          - name: category
+            label: Presentation category
+            type: string
+            description: Conference / workshop, Seminar or Other.
+          - name: info
+            label: Additional information
+            type: string
+            description: For example, Invited seminar or Poster.
+          - name: link
+            label: Slides or external link
+            type: string
+            description: Upload in Talk slides and enter /talks/filename.pdf, or paste an external URL. Leave blank for no link.
+
+  - name: experience
+    label: CV — academic experience
+    type: file
+    path: _data/cv/academic-experience.yml
+    format: yaml
+    list: true
+    operations: {delete: false}
+    fields:
+      - name: title
+        label: Position
+        type: string
+        required: true
+      - name: description
+        label: Institution and dates
+        type: text
+      - name: notes
+        label: Details
+        type: text
+        list: true
+
+  - name: education
+    label: CV — education
+    type: file
+    path: _data/cv/education.yml
+    format: yaml
+    list: true
+    operations: {delete: false}
+    fields:
+      - name: title
+        label: Qualification
+        type: string
+        required: true
+      - name: description
+        label: Institution and dates
+        type: text
+      - name: notes
+        label: Details
+        type: text
+        list: true
+
+  - name: cv
+    label: CV — PDF download
+    type: file
+    path: _data/cv/cv.yml
+    format: yaml
+    list: true
+    operations: {delete: false}
+    fields:
+      - name: title
+        label: Link text
+        type: string
+        required: true
+      - name: link
+        label: CV PDF
+        type: file
+        required: true
+        options:
+          media: cv
+      - name: description
+        label: Description
+        type: text
+      - name: notes
+        label: Details
+        type: text
+        list: true
+
+  - name: contact
+    label: Contact and social links
+    type: file
+    path: _data/settings.yml
+    format: yaml
+    operations: {delete: false}
+    fields:
+      - name: contacts
+        label: Contact details
+        type: object
+        list: true
+        fields:
+          - {name: name, label: Name, type: string, required: true}
+          - {name: department, label: Department, type: string}
+          - {name: institution, label: Institution, type: string}
+          - {name: institution_address, label: Address, type: text}
+          - {name: email, label: Email, type: string}
+          - name: image
+            label: Photo
+            type: image
+            options:
+              media: images
+      - name: social
+        label: Social links
+        type: object
+        list: true
+        fields:
+          - {name: title, label: Display name, type: string}
+          - name: icon
+            label: Icon name
+            type: string
+            description: For example github, linkedin, orcid or google. Leave blank when using a text symbol.
+          - name: icon_html
+            label: Text symbol
+            type: string
+            description: For example @ for email. Leave blank when using an icon name.
+          - {name: link, label: Link, type: string, required: true}
+
+  - name: site
+    label: Site heading
+    type: file
+    path: _config.yml
+    format: yaml
+    operations: {delete: false}
+    fields:
+      - {name: title, label: Name, type: string, required: true}
+      - {name: description, label: Role, type: string}
+      - {name: organization, label: Affiliation, type: string}
+      - name: profile_image
+        label: Homepage portrait
+        type: image
+        options:
+          media: images
+      - name: show_profile_image
+        label: Show portrait on homepage
+        type: boolean

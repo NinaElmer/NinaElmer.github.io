@@ -1,0 +1,12 @@
+# Generated website and caches
+/_site/
+/.jekyll-cache/
+/.jekyll-metadata
+/.sass-cache/
+
+# Local dependencies and editor settings
+/.bundle/
+/vendor/
+/.idea/
+*.gem
+.DS_Store
