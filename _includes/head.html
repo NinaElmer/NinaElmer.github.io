@@ -15,8 +15,8 @@
     })();
   </script>
   <link rel="stylesheet" href="{{ site.github.url }}/assets/libs/bootstrap/bootstrap.min.css">
-  <link rel="stylesheet" href="{{ site.github.url }}/assets/css/main.css">
-  <script defer src="{{ '/assets/js/theme.js' | relative_url }}"></script>
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+  <script defer src="{{ '/assets/js/theme.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
   <link rel="apple-touch-icon" sizes="152x152" href="{{ site.github.url }}/assets/apple-icon-152x152.png">
   <link rel="shortcut icon" href="{{ site.github.url }}/assets/favicon.ico">
 </head>
